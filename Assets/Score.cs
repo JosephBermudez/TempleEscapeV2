@@ -9,24 +9,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ChangeTest : MonoBehaviour
+public class Score : MonoBehaviour
 {
-#region Static Variables
+    #region Static Variables
 
-	
 
-#endregion
 
-#region Public Variables
+    #endregion
 
-	
+    #region Public Variables
 
-#endregion
 
-#region Private Variables
 
+    #endregion
+
+    #region Private Variables
+    [SerializeField]
+    private float maxScore = 100000;
+    private float minuteScore = 100f;
+    private float elapsed;
+    private float timerSpeed = 1f;
 	
 
     #endregion
@@ -46,19 +49,24 @@ public class ChangeTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        elapsed += Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            MainMenu();
-        }   
+            GetScore();
+        }
     }
 
 #endregion
 
 #region Script Methods
 
-	public void MainMenu()
+	public void GetScore()
     {
-        SceneManager.LoadScene("Level 2");
+        float playerScore = elapsed * minuteScore;
+        float totalScore = maxScore - playerScore;
+        Debug.Log(elapsed);
+        Debug.Log(totalScore);
     }
 
 #endregion

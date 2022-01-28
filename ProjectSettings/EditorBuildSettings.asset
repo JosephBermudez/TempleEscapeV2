@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project Assets/Scenes/Level 2.unity
     guid: 7f92b6f2cd707ab4699b201539971292
+  - enabled: 1
+    path: Assets/Project Assets/Scenes/Level 3.unity
+    guid: ac076df85c10aab49aad25b51089cdf5
+  - enabled: 1
+    path: Assets/Project Assets/Scenes/Level 4.unity
+    guid: 42e84d2f6ef1908438c7fb9ce306258b
+  - enabled: 1
+    path: Assets/Project Assets/Scenes/Level 5.unity
+    guid: 69210881536d1574ab866fef62a0df77
+  - enabled: 1
+    path: Assets/Project Assets/Scenes/Level 6.unity
+    guid: 8a23178a48b8b6e449e735f9df00efa1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3ef749841336600438c1b1d7d29eab3d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b5b59ccbe10728c42bce779dd3c6f13d, type: 2}

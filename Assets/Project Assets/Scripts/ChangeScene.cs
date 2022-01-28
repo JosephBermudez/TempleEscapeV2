@@ -21,15 +21,12 @@ public class ChangeScene : MonoBehaviour
 
     #region Public Variables
 
-
+    public string level;
 
     #endregion
 
     #region Private Variables
-    [SerializeField]
-    private GameObject level1;
-    [SerializeField]
-    private GameObject level2;
+
 
 
     #endregion
@@ -37,17 +34,38 @@ public class ChangeScene : MonoBehaviour
     #region MonoBehaviour Callbacks
     private void Start()
     {
-        level1.SetActive(true);
-        level2.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player should've change to a different scene");
-            level1.SetActive(false);
-            level2.SetActive(true);
+            Debug.Log("Player touched the gate");
+            SceneManager.LoadScene(level);
+            //switch (level)
+            //{
+            //    case "Level 2":
+            //        SceneManager.LoadScene("Level 3");
+            //        Debug.Log("Player should've go level 3");
+            //        break;
+            //    case "Level 3":
+            //        SceneManager.LoadScene("Level 4");
+            //        Debug.Log("Player should've go level 4");
+            //        break;
+            //    case "Level 4":
+            //        SceneManager.LoadScene("Level 5");
+            //        Debug.Log("Player should've go level 5");
+            //        break;
+            //    case "Level 5":
+            //        SceneManager.LoadScene("Level 6");
+            //        Debug.Log("Player should've go level 6");
+            //        break;
+            //    case "Level 6":
+            //        SceneManager.LoadScene("Level 1");
+            //        Debug.Log("Player should've go level 1");
+            //        break;
+            //}
+            
         }
     }
 
