@@ -104,16 +104,16 @@ public class OVRHand : MonoBehaviour,
 		}
 		else
 		{
-				IsTracked = false;
-				IsSystemGestureInProgress = false;
-				IsPointerPoseValid = false;
-				PointerPose.localPosition = Vector3.zero;
-				PointerPose.localRotation = Quaternion.identity;
-				HandScale = 1.0f;
-				HandConfidence = TrackingConfidence.Low;
+			IsTracked = false;
+			IsSystemGestureInProgress = false;
+			IsPointerPoseValid = false;
+			PointerPose.localPosition = Vector3.zero;
+			PointerPose.localRotation = Quaternion.identity;
+			HandScale = 1.0f;
+			HandConfidence = TrackingConfidence.Low;
 
-				IsDataValid = false;
-				IsDataHighConfidence = false;
+			IsDataValid = false;
+			IsDataHighConfidence = false;
 		}
 	}
 

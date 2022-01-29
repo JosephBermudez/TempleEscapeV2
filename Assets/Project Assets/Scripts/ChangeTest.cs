@@ -13,8 +13,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeTest : MonoBehaviour
 {
-#region Static Variables
-
+    #region Static Variables
+    public string levelTest;
 	
 
 #endregion
@@ -58,7 +58,7 @@ public class ChangeTest : MonoBehaviour
 
 	public void MainMenu()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene(levelTest);
     }
 
 #endregion

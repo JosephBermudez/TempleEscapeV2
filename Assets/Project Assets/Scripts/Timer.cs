@@ -22,6 +22,8 @@ public class Timer : MonoBehaviour
 #region Public Variables
 
 	public Text text;
+    public Text scoreText;
+    public GameObject score;
 
 #endregion
 
@@ -30,7 +32,9 @@ public class Timer : MonoBehaviour
 	private float timer = 0.0f;
     private bool isTimer = true;
 
-    private float elapsed;
+    [SerializeField]
+    private float maxScore = 100000;
+    private float minuteScore = 100f;
 
     #endregion
 
@@ -38,6 +42,7 @@ public class Timer : MonoBehaviour
 	// Awake is called when the script instance is being loaded
     void Awake()
     {
+        score.SetActive(false);
        timer = 0.0f;
     }
 	// Start is called before the first frame update
@@ -67,6 +72,21 @@ public class Timer : MonoBehaviour
         text.text = string.Format("{0:00} : {1:00}", minutes,seconds);
     }
 
-#endregion
-    
+    public void StopTimer()
+    {
+        Time.timeScale = 0;
+        score.SetActive(true);
+    }
+
+    public void GetScore()
+    {
+        float playerScore = timer * minuteScore;
+        float totalScore = maxScore - playerScore;
+        Debug.Log(timer);
+        Debug.Log(totalScore);
+        scoreText.text = string.Format("0,000,000", totalScore);
+    }
+
+    #endregion
+
 }

@@ -285,19 +285,6 @@ public class OVRManifestPreprocessor
 			"required", "true");
 
 		//============================================================================
-		// Spatial Anchors
-		OVRProjectConfig.SpatialAnchorsSupport targetSpatialAnchorsSupport = OVRProjectConfig.GetProjectConfig().spatialAnchorsSupport;
-		bool spatialAnchorsEntryNeeded = OVRDeviceSelector.isTargetDeviceQuestFamily && (targetSpatialAnchorsSupport == OVRProjectConfig.SpatialAnchorsSupport.Enabled);
-
-		AddOrRemoveTag(doc,
-			androidNamespaceURI,
-			"/manifest",
-			"uses-permission",
-			"com.oculus.permission.USE_ANCHOR_API",
-			spatialAnchorsEntryNeeded,
-			modifyIfFound);
-
-		//============================================================================
 		// Passthrough
 		AddOrRemoveTag(doc,
 			androidNamespaceURI,
