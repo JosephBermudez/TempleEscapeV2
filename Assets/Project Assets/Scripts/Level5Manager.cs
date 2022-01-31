@@ -22,7 +22,7 @@ public class Level5Manager : MonoBehaviour
     public int key,cageKey;
     public Animator movementDoor;
     public Animator doorEscape;
-    public AudioSource stoneGate;
+    public AudioSource stoneGate, cageGate;
 	
 
 #endregion
@@ -55,7 +55,6 @@ public class Level5Manager : MonoBehaviour
 #endregion
 
 #region Script Methods
-
 	
 
 #endregion

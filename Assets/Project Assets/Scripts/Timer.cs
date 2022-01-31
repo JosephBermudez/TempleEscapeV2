@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -23,7 +24,6 @@ public class Timer : MonoBehaviour
 
 	public Text text;
     public Text scoreText;
-    public GameObject score;
 
 #endregion
 
@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
     private bool isTimer = true;
 
     [SerializeField]
-    private float maxScore = 100000;
+    private float maxScore = 1000000;
     private float minuteScore = 100f;
 
     #endregion
@@ -42,8 +42,7 @@ public class Timer : MonoBehaviour
 	// Awake is called when the script instance is being loaded
     void Awake()
     {
-        score.SetActive(false);
-       timer = 0.0f;
+
     }
 	// Start is called before the first frame update
     void Start()
@@ -56,8 +55,12 @@ public class Timer : MonoBehaviour
     {
         if (isTimer)
         {
-            timer += Time.deltaTime;
             DisplayTime();
+        }
+
+        if (maxScore < 0)
+        {
+            maxScore = 0;
         }
     }
 
@@ -67,25 +70,38 @@ public class Timer : MonoBehaviour
 
 	void DisplayTime()
     {
-        int minutes = Mathf.FloorToInt(timer / 60.0f);
-        int seconds = Mathf.FloorToInt(timer - minutes * 60);
+        isTimer = false;
+        int minutes = Mathf.FloorToInt(Time.realtimeSinceStartup / 60.0f);
+        int seconds = Mathf.FloorToInt(Time.realtimeSinceStartup - minutes * 60);
         text.text = string.Format("{0:00} : {1:00}", minutes,seconds);
-    }
 
-    public void StopTimer()
-    {
-        Time.timeScale = 0;
-        score.SetActive(true);
-    }
-
-    public void GetScore()
-    {
-        float playerScore = timer * minuteScore;
+        //score.SetActive(true);
+        //isTimer = false;
+        float playerScore = Time.realtimeSinceStartup * minuteScore;
         float totalScore = maxScore - playerScore;
-        Debug.Log(timer);
+        Debug.Log(Time.realtimeSinceStartup);
         Debug.Log(totalScore);
-        scoreText.text = string.Format("0,000,000", totalScore);
+        scoreText.text = totalScore.ToString("0#,###0");
     }
+
+    //public void GetScore()
+    //{
+    //    Scene currentScene = SceneManager.GetActiveScene();
+
+    //    string sceneName = currentScene.name;
+
+    //    if (sceneName == "Ending")
+    //    {
+    //        score.SetActive(true); 
+    //        isTimer = false;
+    //        float playerScore = timer * minuteScore;
+    //        float totalScore = maxScore - playerScore;
+    //        Debug.Log(timer);
+    //        Debug.Log(totalScore);
+    //        scoreText.text = totalScore.ToString("00");
+    //    }
+
+    //}
 
     #endregion
 

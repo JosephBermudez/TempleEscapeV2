@@ -53,6 +53,7 @@ public class Level3Manager : MonoBehaviour
         teleportActive.SetActive(true);
         Debug.Log("You should open the Door Lv3");
         doorMotion.SetBool("PlayMove", true);
+        gateDoor.PlayOneShot(gateDoor.clip);
     }
 
     #endregion

@@ -15,7 +15,7 @@ public class CheckCollision : MonoBehaviour
     #region Static Variables
 
     public string tag;
-    public AudioSource clickSound, doorSound;
+    public AudioSource clickSound;
 
     #endregion
 
@@ -56,7 +56,6 @@ public class CheckCollision : MonoBehaviour
 
         if (levelManager.totalValue == 3)
         {
-            doorSound.PlayOneShot(doorSound.clip);
             levelManager.OpenDoor();
         }
 

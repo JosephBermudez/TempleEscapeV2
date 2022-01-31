@@ -34,7 +34,6 @@ public class ChangeScene : MonoBehaviour
     #region MonoBehaviour Callbacks
     private void Start()
     {
-        timeScore = GameObject.Find("Timer").GetComponent<Timer>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,16 +42,19 @@ public class ChangeScene : MonoBehaviour
         {
             if (level == "Ending")
             {
-                Debug.Log("Time should have stop");
-                timeScore.StopTimer();
+                SceneManager.LoadScene("Ending");
+                Debug.Log("It is the final level");
+                //timeScore.GetScore();
             }
             else
             {
                 Debug.Log("Player touched the gate");
                 SceneManager.LoadScene(level);
             }
-            
-            //switch (level)
+            //Scene currentScene = SceneManager.GetActiveScene();
+
+            //string sceneName = currentScene.name;
+            //switch (sceneName)
             //{
             //    case "Level 2":
             //        SceneManager.LoadScene("Level 3");
@@ -74,8 +76,15 @@ public class ChangeScene : MonoBehaviour
             //        SceneManager.LoadScene("Ending");
             //        Debug.Log("Player should've go level final");
             //        break;
+            //    case "Ending:":
+            //        Debug.Log("It is the final level");
+            //        timeScore.GetScore();
+            //        break;
+            //    default:
+            //        Debug.Log("That level doesnt exist");
+            //        break;
             //}
-            
+
         }
     }
 

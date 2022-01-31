@@ -18,7 +18,7 @@ public class CheckKey : MonoBehaviour
     public Level5Manager level5Manager;
     public Animator pressure;
 
-    public AudioSource keyPad, platePressure, cageGate;
+    public AudioSource keyPad, platePressure;
 
 #endregion
 
@@ -92,7 +92,6 @@ public class CheckKey : MonoBehaviour
                  case "KeyD":
                 print("Contenedor 3");
                 level5Manager.key++;
-                level5Manager.cageKey++;
                 platePressure.Play();
                 pressure.SetBool("KeyOn",true);
                 break;
@@ -100,7 +99,6 @@ public class CheckKey : MonoBehaviour
                  case "KeyE":
                 print("Contenedor 3");
                 level5Manager.key++;
-                level5Manager.cageKey++;
                 platePressure.Play();
                 pressure.SetBool("KeyOn",true);
                 break;
@@ -108,15 +106,15 @@ public class CheckKey : MonoBehaviour
 
             if (level5Manager.cageKey == 3)
             {
-                level5Manager.movementDoor.SetBool("OpenCage",true);
-                cageGate.PlayOneShot(cageGate.clip);
+                level5Manager.movementDoor.SetBool("OpenCage", true);
+                level5Manager.cageGate.PlayOneShot(level5Manager.cageGate.clip);
             }
 
             if (level5Manager.key == 5)
             {
                 level5Manager.stoneGate.PlayOneShot(level5Manager.stoneGate.clip);
-                level5Manager.doorEscape.SetBool("PlayMove",true);
-                
+                level5Manager.doorEscape.SetBool("PlayMove", true);
+
             }
         }
     }
