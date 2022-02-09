@@ -66,15 +66,6 @@ public class DoorAnimation : MonoBehaviour
         }
         
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Key")
-        {
-            Debug.Log("Door should close");
-            doorMotion.SetBool("LevelComplete", false);
-        }
-    }
     #endregion
 
 }

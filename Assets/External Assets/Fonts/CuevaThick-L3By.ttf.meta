@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a7a901923b114674b8c98fdcb8d3697e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cueva
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 264b9ed00ccb0b149aae6c0f9a1ef456, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

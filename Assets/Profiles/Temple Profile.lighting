@@ -20,11 +20,11 @@ LightingSettings:
   m_LightmapMaxSize: 1024
   m_BakeResolution: 60
   m_Padding: 2
-  m_TextureCompression: 1
+  m_TextureCompression: 0
   m_AO: 1
-  m_AOMaxDistance: 2
+  m_AOMaxDistance: 8
   m_CompAOExponent: 7
-  m_CompAOExponentDirect: 0
+  m_CompAOExponentDirect: 2
   m_ExtractAO: 0
   m_MixedBakeMode: 2
   m_LightmapsBakeMode: 1
@@ -42,7 +42,7 @@ LightingSettings:
   m_PVRSampling: 1
   m_PVRDirectSampleCount: 32
   m_PVRSampleCount: 1024
-  m_PVREnvironmentSampleCount: 512
+  m_PVREnvironmentSampleCount: 1024
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 8
   m_PVRBounces: 4
