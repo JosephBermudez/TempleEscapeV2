@@ -220,7 +220,9 @@ MonoBehaviour:
   _components:
   - componentID: 1
     component: {fileID: 6477667314716472378}
-  _childViews: []
+  _childViews:
+  - viewID: 1
+    view: {fileID: 0}
 --- !u!114 &6477667314716472378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +528,9 @@ MonoBehaviour:
   _components:
   - componentID: 1
     component: {fileID: 5869681064375171076}
-  _childViews: []
+  _childViews:
+  - viewID: 1
+    view: {fileID: 0}
 --- !u!114 &5869681064375171076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,6 +883,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7144592390947958832, guid: cc984b9f4d6b6a3459c3215cdecdca87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7147149956638615862, guid: cc984b9f4d6b6a3459c3215cdecdca87, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -988,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3621981467535291326, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
@@ -1054,7 +1062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3621981467535291326, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
