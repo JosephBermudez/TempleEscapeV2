@@ -720,7 +720,7 @@ Light:
   serializedVersion: 10
   m_Type: 3
   m_Shape: 0
-  m_Color: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
+  m_Color: {r: 0.735849, g: 0.67157304, b: 0.6351904, a: 1}
   m_Intensity: 15
   m_Range: 10
   m_SpotAngle: 30
@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 7981599876256469708}
   - component: {fileID: 7981599876256469710}
   - component: {fileID: 7981599876256469711}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1108,7 +1108,7 @@ GameObject:
   - component: {fileID: 7981599877748141884}
   - component: {fileID: 7981599877748141885}
   - component: {fileID: 7981599877748141874}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas (1) 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
