@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.15
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.05
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 6ff40b20f3d21d64595bd6d711dc7d44, type: 2}
 --- !u!1 &4605607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,6 +2067,7 @@ GameObject:
   - component: {fileID: 878676439}
   - component: {fileID: 878676438}
   - component: {fileID: 878676442}
+  - component: {fileID: 878676443}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -2262,6 +2263,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!195 &878676443
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878676435}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &946676063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4041,6 +4064,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3211799161294907338, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 73
+      objectReference: {fileID: 0}
     - target: {fileID: 3211799161294907342, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -4098,16 +4125,32 @@ PrefabInstance:
       value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 5741222647422830172, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741222647422830172, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774270620219958682, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5774270620219958682, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7445843927594851710, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445843927594851710, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584569140024215300, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7584569140024215300, guid: e7fc1536f25143f4d83d8a6b2c9bfb2a, type: 3}
       propertyPath: m_StaticEditorFlags
